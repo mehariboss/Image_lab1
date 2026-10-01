@@ -1,0 +1,128 @@
+\documentclass[11pt,a4paper]{article}
+
+% ------------------------------------------------
+% Packages
+% ------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{listings}
+\usepackage{hyperref}
+
+% ------------------------------------------------
+% Document settings
+% ------------------------------------------------
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.7em}
+
+% ------------------------------------------------
+% Document
+% ------------------------------------------------
+\begin{document}
+
+% ------------------------------------------------
+% Header
+% ------------------------------------------------
+\begin{center}
+
+{\Large \textbf{DT081A - Signal and Image Processing}}
+
+\vspace{0.4cm}
+
+{\large \textbf{Lab 1 Report}}
+
+\vspace{0.4cm}
+
+Mehari Weldeab Paolos - mewe2300@student.miun.se
+
+\vspace{0.2cm}
+
+\today
+
+\end{center}
+
+\vspace{0.5cm}
+
+% ------------------------------------------------
+% 1. Introduction
+% ------------------------------------------------
+\section{Introduction}
+
+[Briefly describe the lab objectives and the main concepts explored.
+Provide context for the experiments performed.]
+
+% ------------------------------------------------
+% 2. Experimental Setup
+% ------------------------------------------------
+\section{Experimental Setup}
+
+[Outline the methods and tools used in the lab.
+Include any specific parameters or settings that were important
+for the experiments.]
+
+% ------------------------------------------------
+% 3. Results and Analysis
+% ------------------------------------------------
+\section{Results and Analysis}
+
+\subsection{Signal Generation and Visualization}
+1 (a)
+The sawtooth signal can be mathematically represented by the function:
+\[
+x(t) = 2((ft + 0.5) \bmod 1) - 1.
+\]
+Multiplying \(f\) by \(t\) gives us how many cycles have passed at time \(t\). Adding 0.5 shifts the signal by half a period so that it is centered around \(t\) = 0. The modulo ensures the value within the interval [0, 1) and makes the signal restart after each period. Then multiplying by 2 and subtracting 1 scales the signal to the range [-1, 1).
+\smallbreak
+1 (b) The frequency \(f\) is defined as the number of oscillations per unit time. When the frequency is doubled from 10 to 20 Hz, each cycle takes half as much time, which makes the signal appear more compressed in the time direction.
+\smallbreak
+1 (c) Modifying the square wave still alternates between -1 and 1, but unlike before it starts at -1. This is because \(np.ceil(0)\) is 0, and after multiplying by 2 and subtracting 1, the result becomes -1 and positive sine values returns 1.
+\smallbreak
+1 (d) The composite signal consists is the sum of the sine wave and the square wave. When the square wave is at +1, the sine wave is shifted up, and the square wave is at -1, it is shifted down. This results in a signal that oscillates between -2 and 2.
+\smallbreak
+1 (e) It can help to determine how a signal should be processed. For example, in audio processing, an equalizer can increase or decrease different frequency ranges such as bass, midrange and treble.
+\subsection{Fourier Transform and Frequency Domain Analysis}
+2 (a) The frequencies of the signal are 10 Hz and 20 Hz. They can be identified in the plot by the two peaks that are located at approximately 10 and 20 Hz.
+\smallbreak
+2 (b) Adding a 30 Hz component introduces a new peak in the frequency domain plot. Since the new component has the same amplitude as the 10 Hz, their peaks are of equal height.
+\subsection{Sampling and Aliasing}
+\subsection{Image Sampling and Quantization}
+\subsection{PSNR Calculation}
+\subsection{Noise Addition and PSNR Analysis}
+\subsection{Audio Signal Analysis}
+
+
+
+% ------------------------------------------------
+% 4. Discussion
+% ------------------------------------------------
+\section{Discussion}
+
+[Interpret the results in the context of signal and image processing
+concepts. Address any unexpected findings or challenges encountered
+during the lab.]
+
+% ------------------------------------------------
+% 5. Conclusion
+% ------------------------------------------------
+\section{Conclusion}
+
+[Summarize the key findings and insights gained from the lab.
+Reflect on how this lab contributed to your understanding of
+signal and image processing concepts.]
+
+% ------------------------------------------------
+% Appendix
+% ------------------------------------------------
+\section*{Appendix: Code Snippets}
+
+[Include key code segments used in the lab.
+Provide brief explanations for each snippet to demonstrate understanding.]
+
+\end{document}
