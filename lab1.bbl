@@ -1,0 +1,140 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{wangImageQualityAssessment2004}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=f244e8ae5eff7776cf2b4b5b84ad8c4a}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Zhou},
+           giveni={Z\bibinitperiod}}}%
+        {{hash=6192fbf30c45211fdfc67652236bec72}{%
+           family={Bovik},
+           familyi={B\bibinitperiod},
+           given={A.C.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=84051ed6c4d99d3ccc763a9bfdfd28a8}{%
+           family={Sheikh},
+           familyi={S\bibinitperiod},
+           given={H.R.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=071228688c89a654d8f1b7ca8d022a6f}{%
+           family={Simoncelli},
+           familyi={S\bibinitperiod},
+           given={E.P.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ec7f3703fbd419b313e0a329e6241059}
+      \strng{fullhash}{4eadc44b73c932989cbd36a77d356aab}
+      \strng{fullhashraw}{4eadc44b73c932989cbd36a77d356aab}
+      \strng{bibnamehash}{4eadc44b73c932989cbd36a77d356aab}
+      \strng{authorbibnamehash}{4eadc44b73c932989cbd36a77d356aab}
+      \strng{authornamehash}{ec7f3703fbd419b313e0a329e6241059}
+      \strng{authorfullhash}{4eadc44b73c932989cbd36a77d356aab}
+      \strng{authorfullhashraw}{4eadc44b73c932989cbd36a77d356aab}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Objective methods for assessing perceptual image quality traditionally attempted to quantify the visibility of errors (differences) between a distorted image and a reference image using a variety of known properties of the human visual system. Under the assumption that human visual perception is highly adapted for extracting structural information from a scene, we introduce an alternative complementary framework for quality assessment based on the degradation of structural information. As a specific example of this concept, we develop a structural similarity index and demonstrate its promise through a set of intuitive examples, as well as comparison to both subjective ratings and state-of-the-art objective methods on a database of images compressed with JPEG and JPEG2000. A MATLAB implementation of the proposed algorithm is available online at http://www.cns.nyu.edu//spl sim/lcv/ssim/.}
+      \field{issn}{1941-0042}
+      \field{journaltitle}{IEEE Transactions on Image Processing}
+      \field{month}{4}
+      \field{number}{4}
+      \field{shorttitle}{Image Quality Assessment}
+      \field{title}{Image Quality Assessment: From Error Visibility to Structural Similarity}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{volume}{13}
+      \field{year}{2004}
+      \field{urldateera}{ce}
+      \field{pages}{600\bibrangedash 612}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1109/TIP.2003.819861
+      \endverb
+      \verb{file}
+      \verb C:\Users\mehar\Zotero\storage\KZ26URPV\Wang et al. - 2004 - Image quality assessment from error visibility to structural similarity.pdf
+      \endverb
+      \keyw{Data mining,Degradation,Humans,Image quality,Indexes,Layout,Quality assessment,Transform coding,Visual perception,Visual system}
+    \endentry
+    \entry{eladImageDenoisingDeep2023}{misc}{}{}
+      \name{author}{3}{}{%
+        {{hash=20b8206f111f40a7edb0499bc22b9375}{%
+           family={Elad},
+           familyi={E\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=76833b2ca7c33ad4d1001037ed3fe559}{%
+           family={Kawar},
+           familyi={K\bibinitperiod},
+           given={Bahjat},
+           giveni={B\bibinitperiod}}}%
+        {{hash=24085b13104867b003a22c70c0d3f8bb}{%
+           family={Vaksman},
+           familyi={V\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {arXiv}%
+      }
+      \strng{namehash}{3e2c9c555b3538289c28aa5af2602f4a}
+      \strng{fullhash}{e5728c0f43e92a16de7c31b343871400}
+      \strng{fullhashraw}{e5728c0f43e92a16de7c31b343871400}
+      \strng{bibnamehash}{e5728c0f43e92a16de7c31b343871400}
+      \strng{authorbibnamehash}{e5728c0f43e92a16de7c31b343871400}
+      \strng{authornamehash}{3e2c9c555b3538289c28aa5af2602f4a}
+      \strng{authorfullhash}{e5728c0f43e92a16de7c31b343871400}
+      \strng{authorfullhashraw}{e5728c0f43e92a16de7c31b343871400}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{abstract}{Image denoising -- removal of additive white Gaussian noise from an image -- is one of the oldest and most studied problems in image processing. An extensive work over several decades has led to thousands of papers on this subject, and to many well-performing algorithms for this task. Indeed, ten years ago, these achievements have led some researchers to suspect that ``Denoising is Dead'', in the sense that all that can be achieved in this domain has already been obtained. However, this turned out to be far from the truth, with the penetration of deep learning (DL) into the realm of image processing. The era of DL brought a revolution to image denoising, both by taking the lead in today's ability for noise suppression in images, and by broadening the scope of denoising problems being treated. Our paper starts by describing this evolution, highlighting in particular the tension and synergy that exist between classical approaches and modern Artificial Intelligence (AI) alternatives in design of image denoisers.}
+      \field{eprintclass}{eess.IV}
+      \field{eprinttype}{arXiv}
+      \field{langid}{english}
+      \field{month}{1}
+      \field{number}{arXiv:2301.03362}
+      \field{shorttitle}{Image {{Denoising}}}
+      \field{title}{Image {{Denoising}}: {{The Deep Learning Revolution}} and {{Beyond}} -- {{A Survey Paper}} --}
+      \field{urlday}{2}
+      \field{urlmonth}{11}
+      \field{urlyear}{2026}
+      \field{year}{2023}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.48550/arXiv.2301.03362
+      \endverb
+      \verb{eprint}
+      \verb 2301.03362
+      \endverb
+      \verb{file}
+      \verb C:\Users\mehar\Zotero\storage\E9W27IRP\Elad et al. - 2023 - Image Denoising The Deep Learning Revolution and Beyond -- A Survey Paper --.pdf
+      \endverb
+      \keyw{Computer Science - Computer Vision and Pattern Recognition,Electrical Engineering and Systems Science - Image and Video Processing}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

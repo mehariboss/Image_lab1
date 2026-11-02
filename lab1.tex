@@ -1,12 +1,10 @@
 \documentclass[11pt,a4paper]{article}
-
-% ------------------------------------------------
-% Packages
-% ------------------------------------------------
+\usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}
-
+\usepackage[style=ieee, url=false, isbn=false]{biblatex}
+\addbibresource{Exported Items.bib}
 \usepackage[a4paper,margin=2.5cm]{geometry}
 \usepackage{amsmath}
 \usepackage{amssymb}
@@ -16,20 +14,11 @@
 \usepackage{listings}
 \usepackage{hyperref}
 
-% ------------------------------------------------
-% Document settings
-% ------------------------------------------------
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.7em}
 
-% ------------------------------------------------
-% Document
-% ------------------------------------------------
 \begin{document}
 
-% ------------------------------------------------
-% Header
-% ------------------------------------------------
 \begin{center}
 
 {\Large \textbf{DT081A - Signal and Image Processing}}
@@ -98,17 +87,42 @@ Multiplying \(f\) by \(t\) gives us how many cycles have passed at time \(t\). A
 \smallbreak
 2(e) The frequency domain can be used to see which frequencies range a signal occupies, which is important because wireless systems operate in specific parts of the electromagnetic spectrum.
 \subsection{Sampling and Aliasing}
-3(a)
+3(a) The Nyquist rate is 20 Hz and 15 Hz is not sufficent enough.
+\smallbreak
+3(b) Increasing the sampling rate to 25 Hz gives it more samples to be above the Nyquist rate of 20 Hz, so the values contain enough to represent and reconstruct the original signal.
+\smallbreak
+3(c) The signal is sampled at 30 Hz, which is below the Nyquist rate of 40 Hz. Therefore aliasing occurs. The 20 Hz signal appears as a lower frequency component at 10 Hz because frequencies above half the sampling rate are folded into lower frequency range.
+\smallbreak
+3(d) The original signal has a frequency of 25 Hz and it's being sampled at 12 Hz. Because the sampling rate is lower then the expected Nyquist rate, aliasing occurs. This makes the signal appear to have frequency at 1 Hz, even though the orignal signal has 25 cycles per second.
+\smallbreak
+3 (e) A scenario where aliasing is important is when an audio signal is sampled at a rate that is too low. High frequency components can then be reconstructed as incorrect lower frequency. Therefore, the sampling rate must be above the Nyquist rate in order correctly capture the highest frequency in the signal.
 \subsection{Image Sampling and Quantization}
+4 (a) As the resampling factor increases, fewer pixels from the original image are kept,which makes it less detailed. At factor 3, the distortion becomes more apparent, while at factor 4 it is clearly visible. 
+\smallbreak
 \subsection{PSNR Calculation}
+5 (a) According to the PSNR values, the resampled image gave the lowest score with 22.71 dB, compared to 29.21 dB for the requantized image. A lower PSNR means the image is further from the original, so resampling introduces more distortion.
+\smallbreak
+5 (b) The PSNR values agree with what i see, because the resampled image looks worse than the requantized one. But when i look at the image, my own aesthetic judgement mixes with the PSNR value, which makes me think the resampled value should be lower, maybe around 18-19 dB. PSNR only measures the pixel difference from the original, so it does not see the image the way a human does.
+\smallbreak
+5 (c) In Figure 1, we can see tha the PSNR goes down drastically when the factor goes from 2 to 4, from 28.30 to 22.71 dB, which shows that the image quality drops a lot even with a small increase in factor. In Figure 2, the PSNR values show an almost linear relationship with bpp, which means that more bits per pixel gives a higher PSNR and better quality.
+\smallbreak
+5 (d) PSNR is simple to calculate, has a clear physical meaning and is mathematically conventient, but it does match the perceived visual quality very well. SSIM instead compares three things between the original image, luminance, contrast and structure. This is based on the idea that the human visual system is adapted to extact structural information, which PSNR does not take into account \cite{wangImageQualityAssessment2004}
+\smallbreak
+5 (e) Both metrics agrees that requantization gives better results. The PSNR is 29.21 dB for requantization and 22.71 dB for resampling, and the SSIM is 0.88 for requantization and 0.66 for resampled, where 1 means identical to the original image. PSNR compares the images pixel by pixel, which gives a simple mathematical measure. SSIM instead compares the structure of the images, and the values show that the resampled image loses its structure because the edges become blocky, while the reqauntized keeps its structure but has fewer grey levels.
 \subsection{Noise Addition and PSNR Analysis}
+6 (a) I first started to see the noise at a standard deviation of 9, when i glanced back and forth between images and noticed grainy pixels on the smooth skin of the woman (Figure 3). This corresponds to a PSNR value of 29.04 dB.
+\smallbreak
+6 (b) The cited threshold agrees with my result, since i started to see the noise at 29.04 dB, just shy of 30 dB. This makes 30 dB a good estimation of the threshold for acceptable image quality.
+\smallbreak
+6 (c) Within the given interval 0-50, the noisy image was still recognizable, but at a deviation of 460 it became completely unrecognizable, as shown in Figure 4. The PSNR value at that deviation is 6.32 dB.
+\smallbreak
+6 (d) To remove the noise from the image with a deviation of 35, i used a 3x3 median filter, which increased the value from 17.45 to 24.45 db, an increase of 7 dB. However, it did not reach the acceptable quality threshold disscussed in 6 (b). The PSNR value also does not show that details in the image are lost, because the filter removes so called pixel outliers. This can be seen in Figure 5.
+\smallbreak
+6 (e) A more advanced method to remove noise is Non-Local Means. A medium filter only looks at the area around each pixel, but Non-Local Means searches whole image for patches that look alike and average them togheter. Because of this, noise can be removed without blurring away as many details, which was the problem with the median filter in Figure 5. Today, deep learning methods using neural networks perform even better, as they learn what clean images look like from large amounts of data \cite{eladImageDenoisingDeep2023}.
 \subsection{Audio Signal Analysis}
 
 
 
-% ------------------------------------------------
-% 4. Discussion
-% ------------------------------------------------
 \section{Discussion}
 
 [Interpret the results in the context of signal and image processing
@@ -131,5 +145,5 @@ signal and image processing concepts.]
 
 [Include key code segments used in the lab.
 Provide brief explanations for each snippet to demonstrate understanding.]
-
+\printbibliography
 \end{document}
