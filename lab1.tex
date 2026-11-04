@@ -123,6 +123,15 @@ Multiplying \(f\) by \(t\) gives us how many cycles have passed at time \(t\). A
 
 7 (a) The audio clip is 502 miliseconds long, as shown in Figure 6. The highest frequency component is 4833 Hz. This is due to the fact that the weaker audio frequencies that are lower than 1\% of the strongest frequency were disregarded, since otherwise even small noise peaks would have been counted.
 
+7 (b) The bright horizontal lines under 5 kHz in Figure 7 represents the fundamental frequency and its overtones, since they are the strongest and the brightest.
+
+7 (c) The FFT sorts the signal into frequency bins that match its frequency strength, and as seen in Figure 8, the peak of the fundamental frequency becomes larger and goes from 2400 to 3000 Hz, while its position stays around 220 Hz.
+
+7 (d) Different audio files of speech, music and a machine sound were chosen, with different time lengths and different sounds, which gives different outputs, as shown in Figure 9. The electric shaver keeps the same strength through the whole 22s without any pauses, and its spectrum is spread over many frequencies up to roughly 6 kHz, with the strongest peaks reaching 500 and 700 Hz. Since the sound never changes, the spectrogram looks the same from start to end. The music starts quiter, because only the drums play first 10s before the bass and other instruments come in, and each drum hit shows up in the spectogram as small vertical lines. The speech is only 0,701s long and has two bursts with short silence between them, one for each word, which also appear as two seperate bright patches in the spectogram.
+
+7 (e) A downsample function was implemented to reduce the sample rate, using the factors 1,4,6 and 8. Factor 1 is the original and will be used as the comparison. At factor 4(11025 Hz) there is only a small difference, but the sound feels slighlty grainy and muffled and seems to end more abruptly. At factor 6 (7350 Hz) the sound becomes muffled and slightly distored, since higher overtones are lost. At factor 8 (5512 Hz) the sound becomes very dull and distant, as mostly the low frequency remain. The first small extra peaks between the harmonics appear at factor 6, which is aliasing.
+
+7 (f) A common processing technique is pitch shifting, where the pitch of the sound is shifted to be either higher or lower without changing the length of the audio. It can be done with resampling, as in 7 (e), combined with dividing the audio into smaller pieces like in the spectogram in the question before, and then stretching them out in time to match the original sound. The result is a sound with a different pitch but same length. This method is called a phase vocoder. It is used in the music industry, where autotune and other voice filters are used.
 \section{Discussion}
 
 [Interpret the results in the context of signal and image processing
