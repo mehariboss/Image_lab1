@@ -97,7 +97,12 @@ Multiplying \(f\) by \(t\) gives us how many cycles have passed at time \(t\). A
 \smallbreak
 3 (e) A scenario where aliasing is important is when an audio signal is sampled at a rate that is too low. High frequency components can then be reconstructed as incorrect lower frequency. Therefore, the sampling rate must be above the Nyquist rate in order correctly capture the highest frequency in the signal.
 \subsection{Image Sampling and Quantization}
-4 (a) As the resampling factor increases, fewer pixels from the original image are kept,which makes it less detailed. At factor 3, the distortion becomes more apparent, while at factor 4 it is clearly visible. 
+4 (a) As the resampling factor increases, fewer pixels from the original image are kept, which makes it less detailed. At factor 3, the distortion becomes more apparent, while at factor 4 it is clearly visible. 
+
+4 (b) Resampling makes the image blocky, since each kept pixel is repeated into a larger square. Requantization instead keeps the original sharpness but removes gray levels, so smooth areas such as the cheeks turn into flat patches instead of soft transitions. The difference is that resampling affects the shapes and edges in the image, while requantization affects the color levels,
+
+4 (c) At 7 and 6 bpp the image looks the same as the original, but at 5 bpp it becomes slightly darker.
+
 \smallbreak
 \subsection{PSNR Calculation}
 5 (a) According to the PSNR values, the resampled image gave the lowest score with 22.71 dB, compared to 29.21 dB for the requantized image. A lower PSNR means the image is further from the original, so resampling introduces more distortion.

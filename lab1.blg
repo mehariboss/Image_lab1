@@ -1,0 +1,15 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[0] Config.pm:331> INFO - Logfile is 'lab1.blg'
+[219] biber-MSWIN64:342> INFO - === 
+[301] Biber.pm:421> INFO - Reading 'lab1.bcf'
+[395] Biber.pm:1002> INFO - Found 2 citekeys in bib section 0
+[409] Biber.pm:4487> INFO - Processing section 0
+[428] Biber.pm:4678> INFO - Looking for bibtex file 'Exported Items.bib' for section 0
+[463] bibtex.pm:1713> INFO - LaTeX decoding ...
+[481] bibtex.pm:1519> INFO - Found BibTeX data source 'Exported Items.bib'
+[564] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[564] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[564] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'en-US'
+[564] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[567] bbl.pm:676> INFO - Writing 'lab1.bbl' with encoding 'UTF-8'
+[569] bbl.pm:779> INFO - Output to lab1.bbl
